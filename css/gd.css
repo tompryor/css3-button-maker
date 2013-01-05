@@ -1,0 +1,254 @@
+/* line 1, sass/partials/_base.scss */
+body, html {
+  font-family: helvetica,arial,sans-serif;
+  font-size: 90%;
+  padding: 0;
+  background-color: #FFFFFF;
+}
+
+/* line 3, sass/partials/_base.scss */
+.hide {
+  display: none;
+}
+
+/* line 7, sass/partials/_gradientDesigner.scss */
+.noDisplay {
+  display: none;
+}
+
+/* line 16, sass/partials/_gradientDesigner.scss */
+.gradientType {
+  display: inline-block;
+}
+
+/* line 20, sass/partials/_gradientDesigner.scss */
+.gradient_designer {
+  padding: 0 50px 50px;
+  overflow: auto;
+  width: 900px;
+}
+
+/* line 26, sass/partials/_gradientDesigner.scss */
+.circularGaugeLinearGradientDegreeContainer, .circularGaugeRadialGradientDegreeContainer {
+  padding-right: 40px;
+}
+
+/* line 30, sass/partials/_gradientDesigner.scss */
+.circularGaugeLinearGradientDegreeContainer p, .circularGaugeRadialGradientDegreeContainer p {
+  margin: 0;
+  text-align: center;
+}
+
+/* line 35, sass/partials/_gradientDesigner.scss */
+.glossyGauge {
+  margin: 0 auto;
+  text-align: center;
+  width: 180px;
+}
+
+/* line 42, sass/partials/_gradientDesigner.scss */
+.gradientPreview {
+  border: 1px solid black;
+  height: 250px;
+  margin: 20px 0 50px 20px;
+  padding: 0;
+  width: 795px;
+  -webkit-box-shadow: 0 4px 20px 0 #939197;
+  -moz-box-shadow: 0 4px 20px 0 #939197;
+  box-shadow: 0 4px 20px 0 #939197;
+}
+
+/* line 51, sass/partials/_gradientDesigner.scss */
+.gdContainer {
+  float: left;
+  margin-right: 30px;
+}
+
+/* line 56, sass/partials/_gradientDesigner.scss */
+.gdContainer p {
+  margin-bottom: 0;
+}
+
+/* line 60, sass/partials/_gradientDesigner.scss */
+.codePreview {
+  float: left;
+  width: 817px;
+}
+
+/* line 65, sass/partials/_gradientDesigner.scss */
+.codePreview h2 {
+  margin-top: 0;
+}
+
+/* line 70, sass/partials/_gradientDesigner.scss */
+pre.prettyprint {
+  padding: 14px;
+  background-color: #efefef;
+  color: #fff;
+  margin-left: 20px;
+  overflow: auto;
+}
+
+/* line 7, sass/partials/_gradientSlider.scss */
+.moveable {
+  background: none repeat scroll 0 0 #FFFFBF;
+  border: 1px solid black;
+  cursor: pointer;
+  height: 17px;
+  margin: 0;
+  padding: 0;
+  width: 20px;
+  position: absolute;
+  -webkit-box-shadow: 1px 1px 3px 0 #333333;
+  -moz-box-shadow: 1px 1px 3px 0 #333333;
+  box-shadow: 1px 1px 3px 0 #333333;
+}
+
+/* line 19, sass/partials/_gradientSlider.scss */
+.sliderBar {
+  background: none repeat scroll 0 0 #fff;
+  border: 9px solid #fff;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+  width: 816px;
+}
+
+/* line 28, sass/partials/_gradientSlider.scss */
+.arrowUp {
+  border-bottom: 5px solid #2F2F2F;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  height: 0;
+  left: 32%;
+  position: relative;
+  top: -6px;
+  width: 0;
+}
+
+/* line 39, sass/partials/_gradientSlider.scss */
+.handleValue {
+  position: relative;
+  text-align: center;
+  top: -28px;
+}
+
+/* line 45, sass/partials/_gradientSlider.scss */
+.clone {
+  display: none;
+}
+
+/* line 50, sass/partials/_gradientSlider.scss */
+.sliderBar {
+  cursor: pointer;
+}
+
+/* line 54, sass/partials/_gradientSlider.scss */
+.sliderBar .dojoxColorPicker {
+  position: absolute;
+  z-index: 1;
+}
+
+/* line 61, sass/partials/_gradientSlider.scss */
+.dojoMoveItem {
+  cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+  cursor: move;
+}
+
+/* line 67, sass/partials/_gradientSlider.scss */
+.closeColorPicker {
+  position: absolute;
+  z-index: 2;
+}
+
+/* line 73, sass/partials/_gradientSlider.scss */
+.fancy-button-reset-base-class, .fancy-button-base, a.big, button {
+  font-family: 'Lucida Grande', Lucida, Arial, sans-serif;
+  background: url("../images/button_bg.png?1262308446") repeat-x bottom left;
+  margin: 0;
+  width: auto;
+  overflow: visible;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  border-style: solid;
+  font-weight: bold;
+}
+
+/* line 87, sass/partials/_gradientSlider.scss */
+.arrow {
+  -moz-border-radius: 1em;
+  -webkit-border-radius: 1em;
+  -o-border-radius: 1em;
+  -ms-border-radius: 1em;
+  -khtml-border-radius: 1em;
+  border-radius: 1em;
+  font-size: 30px;
+  line-height: 1.2em;
+  padding: 0.3em 1em;
+  border-width: 1px;
+  background-color: #fff;
+  background-image: -webkit-gradient(radial, 50% 10%, 0, 50% 10%, 30, color-stop(0%, white), color-stop(100%, #c1c1c1));
+  background-image: -moz-radial-gradient(50% 10%, circle, white 0%, #c1c1c1 30px);
+  background-image: radial-gradient(50% 10%, circle, #ffffff 0%, #c1c1c1 30px);
+  border-color: #b7b7b7;
+  text-shadow: #fff 0px 1px 1px;
+  -moz-box-shadow: rgba(255, 255, 255, 0.867) 0 0 0.1em 1px inset;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.867) 0 0 0.1em 1px inset;
+  -o-box-shadow: rgba(255, 255, 255, 0.867) 0 0 0.1em 1px inset;
+  box-shadow: rgba(255, 255, 255, 0.867) 0 0 0.1em 1px inset;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  -o-background-clip: padding-box;
+  -ms-background-clip: padding-box;
+  -khtml-background-clip: padding-box;
+  background-clip: padding-box;
+  padding: 2px 6px;
+  border-width: 2px;
+}
+
+/* line 117, sass/partials/_gradientSlider.scss */
+.arrow, .arrow:visited {
+  color: #222222;
+}
+
+/* line 120, sass/partials/_gradientSlider.scss */
+.arrow:hover, .arrow:focus {
+  background-color: #fff;
+  background-image: -webkit-gradient(radial, 50% 10%, 0, 50% 10%, 30, color-stop(0%, #fcfcfc), color-stop(100%, #b9b9b9));
+  background-image: -moz-radial-gradient(50% 10%, circle, #fcfcfc 0%, #b9b9b9 30px);
+  background-image: radial-gradient(50% 10%, circle, #fcfcfc 0%, #b9b9b9 30px);
+  border-color: #afafaf;
+  text-shadow: white 0px 1px 1px;
+}
+
+/* line 128, sass/partials/_gradientSlider.scss */
+.arrow:hover, .arrow:hover:visited, .arrow:focus, .arrow:focus:visited {
+  color: #222222;
+}
+
+/* line 131, sass/partials/_gradientSlider.scss */
+.arrow:active {
+  background-color: #fff;
+  background-image: -webkit-gradient(radial, 50% 10%, 0, 50% 10%, 30, color-stop(0%, #d8d8d8), color-stop(100%, #f1f1f1));
+  background-image: -moz-radial-gradient(50% 10%, circle, #d8d8d8 0%, #f1f1f1 30px);
+  background-image: radial-gradient(50% 10%, circle, #d8d8d8 0%, #f1f1f1 30px);
+  border-color: #a7a7a7;
+  text-shadow: white 0px -1px -1px;
+  -moz-box-shadow: #b7b7b7 0 0.08em 0.1em 1px inset;
+  -webkit-box-shadow: #b7b7b7 0 0.08em 0.1em 1px inset;
+  -o-box-shadow: #b7b7b7 0 0.08em 0.1em 1px inset;
+  box-shadow: #b7b7b7 0 0.08em 0.1em 1px inset;
+}
+
+/* line 143, sass/partials/_gradientSlider.scss */
+.arrow:active, .arrow:active:visited {
+  color: #222222;
+}
+
+
+
+.codePreview{
+	display: none;
+}

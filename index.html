@@ -1,0 +1,280 @@
+<!doctype html> <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+	<!--<![endif]-->
+	<head id="header">
+		<meta charset="utf-8">
+		<!-- Use the .htaccess and remove these lines to avoid edge case issues.
+		More info: h5bp.com/i/378 -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>CSS3 Button Maker</title>
+		<meta name="description" content="">
+		<!-- Mobile viewport optimized: h5bp.com/viewport -->
+		<meta name="viewport" content="width=device-width">
+		<!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+		<link rel="stylesheet" href="css/master.css">
+		<!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+		<!-- All JavaScript at the bottom, except this Modernizr build.
+		Modernizr enables HTML5 elements & feature detects for optimal performance.
+		Create your own custom Modernizr build: www.modernizr.com/download/ -->
+		<script src="js/libs/modernizr-2.5.3.min.js"></script>
+		<style>
+		</style>
+		<style id="defaultButtonStyle"></style>
+		<style id="overButtonStyle"></style>
+		<style id="clickButtonStyle"></style>
+	</head>
+	<body class="claro" onload="prettyPrint()" >
+		<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
+		chromium.org/developers/how-tos/chrome-frame-getting-started -->
+		<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+		<header>
+			<span id="toolbar"></span>
+		</header>
+		<div id="main" role="main">
+			<div id="buttonContainer">
+				<button id="cssButton">
+					My Button
+				</button>
+			</div>
+			<p>
+				&nbsp;
+			</p>
+			<div id="controls">
+				<a name="sizeSliders"></a>
+				<div id="sizeSlider" class="css3Widget">
+					<div class="inner">
+						<span class="title"> Size Sliders </span>
+						<!-- <div data-dojo-type="dvia.widgets.ColorPicker.ColorPicker"></div>
+						<p></p>-->
+						<a name="height-Slider"></a><div data-dojo-type="dvia.Slider" data-dojo-props="
+						minimum: 0,
+						maximum: 1000,
+						pageIncrement: 10,
+						value: parseInt(app.cssMemoryStore.get('height').value),
+						intermediateChanges: true,
+						id:'heightSlider',
+						watchProperty: 'height',
+						valueType: 'px',
+						model: app"></div>
+						<a name="width-Slider"></a><div data-dojo-type="dvia.Slider" data-dojo-props="
+						minimum: 0,
+						maximum: 1000,
+						pageIncrement: 20,
+						value: parseInt(app.cssMemoryStore.get('width').value),
+						intermediateChanges: true,
+						id:'widthSlider',
+						watchProperty: 'width',
+						valueType: 'px',
+						model: app"></div>
+						<a name="margin-Slider"></a><div data-dojo-type="dvia.Slider" data-dojo-props="
+						minimum: 0,
+						maximum: 1000,
+						pageIncrement: 20,
+						value: parseInt(app.cssMemoryStore.get('margin').value),
+						intermediateChanges: true,
+						id:'marginSlider',
+						watchProperty: 'margin',
+						valueType: 'px',
+						model: app"></div>
+						<a name="padding-Slider"></a><div data-dojo-type="dvia.Slider" data-dojo-props="
+						minimum: 0,
+						maximum: 1000,
+						pageIncrement: 20,
+						value: parseInt(app.cssMemoryStore.get('padding').value),
+						intermediateChanges: true,
+						id:'paddingSlider',
+						watchProperty: 'padding',
+						valueType: 'px',
+						model: app"></div>
+					</div>
+				</div>
+			</div>
+			<a name="border-Slider"></a><div data-dojo-type="dvia.Border" data-dojo-props="
+			minimum: 0,
+			maximum: 100,
+			pageIncrement: 77,
+			value: parseInt(app.cssMemoryStore.get('border').value),
+			intermediateChanges: true,
+			id:'borderSlider',
+			watchProperty: 'border',
+			valueType: 'px',
+			model: app"></div>
+			<a name="borderRadius-Slider"></a><div data-dojo-type="dvia.BorderRadius" data-dojo-props="
+			minimum: 0,
+			maximum: 100,
+			pageIncrement: 20,
+			value: 20,
+			intermediateChanges: true,
+			id:'BorderRadius',
+			watchProperty: 'border-radius',
+			dojoProperty: 'borderRadius',
+			valueType: 'px',
+			model: app"></div>
+			<a name="boxShadow-Slider"></a><div data-dojo-type="dvia.ShadowSliders" data-dojo-props="
+			minimum: 0,
+			maximum: 100,
+			pageIncrement: 20,
+			value: 20,
+			intermediateChanges: true,
+			id:'ShadowSliders',
+			watchProperty: 'box-shadow',
+			dojoProperty: 'boxShadow',
+			valueType: 'px',
+			model: app"></div>
+			<a name="textShadow-Slider"></a><div data-dojo-type="dvia.ShadowSliders" data-dojo-props="
+			minimum: 0,
+			maximum: 100,
+			pageIncrement: 20,
+			value: 20,
+			intermediateChanges: true,
+			id:'TextShadowSliders',
+			watchProperty: 'text-shadow',
+			dojoProperty: 'textShadow',
+			valueType: 'px',
+			model: app"></div>
+			
+				<div id="GDSliders" class="gradient_designer css3Widget"
+		data-dojo-type="dvia/widgets/gradientDesigner/GradientDesigner"></div>
+
+			
+			<div id="FontSliders" class="css3Widget">
+				<div class="inner">
+					<span class="title"> <a name="fontSliders"></a>Font Sliders </span>
+					<div data-dojo-type="dvia.Slider" data-dojo-props="
+					minimum: 0,
+					maximum: 100,
+					pageIncrement: 10,
+					value: parseInt(app.cssMemoryStore.get('font-size').value),
+					intermediateChanges: true,
+					id:'fontsizeSlider',
+					watchProperty: 'font-size',
+					valueType: 'px',
+					model: app"></div>
+					
+					
+					<a name="lineHeight-Slider"></a><div data-dojo-type="dvia.Slider" data-dojo-props="
+					minimum: 0,
+					maximum: 1000,
+					pageIncrement: 20,
+					value: parseInt(app.cssMemoryStore.get('line-height').value),
+					intermediateChanges: true,
+					id:'lineHeightSlider',
+					watchProperty: 'line-height',
+					valueType: 'px',
+					model: app"></div>
+				</div>
+			</div>
+			<!-- 				<div id="GDSliders" class="css3Widget gd">
+			<div class="inner">
+			<span class="title"> <a name="gdSliders"></a>Gradient Designer</span>
+			<div data-dojo-type="dvia.widgets.gradientDesigner.GradientDesigner"></div>
+
+			</div>
+			</div> -->
+				<br style="clear:both" />
+
+			<pre  class="showMe prettyprint"><code id="code" class="language-css">
+				
+button {
+	test: 59px;
+	line-height: 59px;
+	font-family: Georgia;
+	border: 2px solid rgba(109, 91, 101, 0.6);
+	padding: 0px;
+	width: 300px;
+	height: 80px;
+	margin: 0px;
+	color: white;
+	font-size: 40px;
+	border-radius: 4px 4px 4px 4px;
+	background-image: -moz-linear-gradient(top, #f5d4d4 0%, #ee0e0e 16.4%, #df1c1c 50.4%, #020202 51.2%, #020202 88.6%, #a89f9f 100%);
+	background-color: black;
+	box-shadow:  0px 0px 4px 0px rgba(109, 91, 101, 0.6);
+	text-shadow: 0px 2px 4px rgba(109, 91, 101, 0.6);
+	-moz-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(0deg, 0deg);
+	-moz-transform-origin: 0% 0%;
+}
+				
+			</code></pre>
+		</div>
+		</div> <footer></footer>
+		<!-- JavaScript at the bottom for fast page loading -->
+		<!-- dojo.js is an AMD-compliant loader script. It accepts configuration either from a data-dojo-config attribute,
+		as shown here, from a global dojoConfig object (which must be defined *before* dojo.js is loaded), or from
+		a global require object.
+
+		Configuration options for the loader can be viewed at http://livedocs.dojotoolkit.org/loader/amd
+		along with a bunch of additional information about its features.
+
+		Below, were doing the following:
+
+		1. Enabling the AMD loader. (async: 1)
+		2. Fixing the loader to use normal AMD resolution of unregistered module paths (relative to baseDir)
+		instead of the traditional Dojo resolution method (relative to the parent of baseDir).
+		(tlmSiblingOfDojo: 0)
+		3. Enabling debugging. (isDebug: 1)
+
+		The remainder of Dojo configuration, as well as our applications instantiation, occurs within
+		app/run.js. -->
+<!-- 		<script>
+			// Instead of using data-dojo-config, were creating a dojoConfig object
+			// *before* we load dojo.js; theyre functionally identical.
+			var dojoConfig = {
+				async : true,
+				parseOnLoad : true,
+				// This code registers the correct location of the "demo" package
+				// so we can load Dojo from the CDN whilst still being able to
+				// load local modules
+				packages : [{
+					name : "dvia",
+					location : '/js/dvia'
+				}]
+			};
+			//var localtion = location.pathname.replace(/\/[^\/]+$/, '/js');
+		</script>
+		
+ -->		
+ 
+ <script
+	data-dojo-config="async: 1, dojoBlankHtmlUrl: '/blank.html',
+        packages: [ {
+            name: 'dvia',
+            location: location.pathname.replace(/\/[^/]+$/, '') + '/js/dvia'
+        } ]"
+	src="http://ajax.googleapis.com/ajax/libs/dojo/1.8.2/dojo/dojo.js"></script>
+ <script type="text/javascript" charset="utf-8">
+    require([
+        "dojo/parser",
+        "dojo/ready"
+    ], function (parser, ready)
+    {
+        ready(function ()
+        {
+            parser.parse();
+            console.debug("Ready");
+
+        });
+    });
+</script>
+ 
+ <!-- http://leaverou.github.com/prefixfree/t -->
+		<link href="js/libs/google-code-prettify/prettify.css" type="text/css" rel="stylesheet" />
+
+				<script src="js/libs/google-code-prettify/prettify.js"></script>
+
+		<script src="js/prefixfree.min.js"></script>
+<!-- 		<script src="http://ajax.googleapis.com/ajax/libs/dojo/1.7.2/dojo/dojo.js"></script> -->
+		<!--<script src="http://dvia.com/dojo/dojo/dojo.js"></script>-->
+<!-- 		 <script src="/dojo/dojo/dojo.js"></script> 
+ -->		<!-- scripts concatenated and minified via build script -->
+		<script src="js/plugins.js"></script>
+		<script src="js/script.js"></script>
+		
+		<!-- end scripts -->
+	</body>
+</html>

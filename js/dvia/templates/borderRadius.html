@@ -1,0 +1,22 @@
+<div class="css3Widget">
+	<div class="inner">
+	<div class="control label options">
+		<span class="title">{{ watchProperty }} Sliders </span>
+
+		<label for="borderRadiusWidetEqualCheckbox{{ watchProperty }}" data-dojo-attach-point="shadowWidetInsetLabel">Equal Borders</label>
+		<span id="borderRadiusWidetEqualCheckbox{{ watchProperty }}" data-dojo-attach-point="borderRadiusWidetEqualCheckbox{{ watchProperty }}" data-dojo-type="dijit.form.CheckBox" data-dojo-props="checked:false" data-dojo-attach-event="onChange:_onEqualCheckBox"></span>
+
+		<label for="borderRadiusWidetEnableToggleCheckbox{{ watchProperty }}" data-dojo-attach-point="borderRadiusWidetEnableToggleLabel">On</label>
+		<span id="borderRadiusWidetEnableToggleCheckbox{{ watchProperty }}" data-dojo-type="dijit.form.CheckBox" data-dojo-props="checked:true" data-dojo-attach-event="onChange:_onEnabledCheckBox"></span>
+
+
+	</div>
+	
+	<div class="css code" data-dojo-attach-point="borderWidgetWidetCode{{ watchProperty }}"></div>
+	
+		<br style="clear:both" />
+
+	<div data-dojo-attach-point="borderRadiusControlls"></div>
+</div>
+</div>
+</div>

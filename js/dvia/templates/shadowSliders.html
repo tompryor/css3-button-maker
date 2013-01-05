@@ -1,0 +1,21 @@
+<div class="css3Widget">
+	<div class="inner">
+	<div class="control label options">
+		<span class="title">{{ watchProperty }} Sliders </span>
+		{% if boxShadow %}
+		<label for="shadowWidetInsetCheckbox{{ watchProperty }}" data-dojo-attach-point="shadowWidetInsetLabel">Inset</label>
+		<span id="shadowWidetInsetCheckbox{{ watchProperty }}" data-dojo-attach-point="shadowWidetInsetCheckbox{{ watchProperty }}" data-dojo-type="dijit.form.CheckBox" data-dojo-props="checked:false" data-dojo-attach-event="onChange:_onInsetCheckBox"></span>
+		{% endif %}
+		<label for="shadowWidetEnableToggleCheckbox{{ watchProperty }}" data-dojo-attach-point="shadowWidetEnableToggleLabel">On</label>
+		<span id="shadowWidetEnableToggleCheckbox{{ watchProperty }}" data-dojo-type="dijit.form.CheckBox" data-dojo-props="checked:true" data-dojo-attach-event="onChange:_onEnabledCheckBox"></span>
+
+
+	</div>
+	
+	<div class="css code" data-dojo-attach-point="shadowWidetCode{{ watchProperty }}"></div>
+	
+	<br style="clear:both" />
+	
+	
+	<div data-dojo-attach-point="shadowSlidersControlls"></div>
+</div>

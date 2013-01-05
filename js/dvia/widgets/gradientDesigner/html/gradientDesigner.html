@@ -1,0 +1,86 @@
+<div>
+	<div class="gdContainer">
+		<h2>CSS 3 Gradient Designer</h2>
+		<div class="gradientPreview">&nbsp;</div>
+		<div
+			data-dojo-type="dvia/widgets/gradientDesigner/gradientSlider/GradientSlider"
+			data-dojo-attach-point="gradientSlider"></div>
+		<p>You can drag the handles above to update their position, or dbl
+			click them to change their color. To add a new handle, simply click
+			below the horizontal ruler. Delete the handle by holding down the alt
+			key and dbl clicking on it.</p>
+
+
+
+		<h2 class="gradientType">Gradient Type:</h2>
+		<select data-dojo-attach-event="onchange: _onGradientTypeChange">
+			<option value="linear-gradient">Linear Gradient</option>
+			<option value="repeating-linear-gradient">Repeating Linear Gradient</option>
+			<option value="radial-gradient">Radial Gradient</option>
+			<option value="repeating-radial-gradient">Repeating Radial Gradient</option>
+			
+		</select>
+
+		<!-- Linear Gradient Options -->
+
+		<div class="gradientOptions" data-dojo-attach-point="linearGradient">
+			<div class="circularGaugeLinearGradientDegreeContainer">
+				<p>
+					<strong>Gradient Direction</strong>
+				</p>
+				<div id="CircularGaugeLinearGradientDegree"></div>
+			</div>
+
+
+		</div>
+
+		<!-- Radial Gradient Options -->
+
+		<div class="gradientOptions noDisplay"
+			data-dojo-attach-point="radialGradient">
+			<label for="shape">Choose your Shape</label> <select
+				name="shape" id="shape"
+				data-dojo-attach-event="onchange: _onGradientShapeChange">
+				<option value="circle">Circle</option>
+				<option value="ellipse">Ellipse</option>
+			</select>
+			
+			<label for="xPosRadial">Set horizontal position</label> <input title="You can also use the up/down arrow keys to change the value." type="text" id="xPosRadial" data-dojo-attach-event="onblur: _onxPosRadialChange, onkeydown: _onPosRadialKeyDown" value="375" maxlength="3" size="2">
+			<label for="yPosRadial">Set vertical position</label> <input title="You can also use the up/down arrow keys to change the value." type="text" id="yPosRadial" data-dojo-attach-event="onblur: _onyPosRadialChange, onkeydown: _onPosRadialKeyDown" value="125" maxlength="3" size="2">
+			
+
+			<label for="endingSize">Choose your size</label> <select
+				name="endingSize" id="endingSize"
+				data-dojo-attach-event="onchange: _onGradientSizeChange">
+				<option title="The gradient's ending shape meets the side of the box closest to its center (for circles) or meets both the vertical and horizontal sides closest to the center (for ellipses)." value="closest-side">Closest Side</option>
+				<option title="The gradient's ending shape is sized so it exactly meets the closest corner of the box from its center." value="closest-corner">Closest Corner</option>
+				<option title="Similar to closest-side, except the ending shape is sized to meet the side of the box farthest from its center (or vertical and horizontal sides)." value="farthest-side">Farthest Side</option>
+				<option title="The gradient's ending shape is sized so it exactly meets the farthest corner of the box from its center." value="farthest-corner">Farthest Corner</option>
+			</select>
+
+			<div class="circularGaugeRadialGradientDegreeContainer noDisplay" data-dojo-attach-point="circularGaugeRadialGradientDegreeContainer">
+				<p>
+					<strong>Gradient Direction</strong>
+				</p>
+				<div id="CircularGaugeRadialGradientDegree"></div>
+			</div>
+
+		</div>
+
+
+	</div>
+	<div class="codePreview">
+		<h2>Code</h2>
+		<pre class="prettyprint lang-css">
+	</pre>
+	</div>
+	<br style="clear: left;" />
+	<!-- <p>
+		NOTE: <em>I removed the non-vendor specific style rule as it
+			implements angles differently than the vendor-prefixed rules. That
+			means the deg value will point in a different direction once your
+			browser implements the standard. To avoid confusion, for now I am
+			only using vendor prefixes for the rules until I come up with a
+			solution. </em>
+	</p> -->
+</div>

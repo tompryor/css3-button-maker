@@ -1,0 +1,17 @@
+/*@import "/css/style.css";*/
+/* @import "/dojo/dijit/themes/claro/claro.css";
+@import "/dojo/dojox/widget/ColorPicker/ColorPicker.css";
+@import "../js/dvia/widgets/ColorPicker/ColorPicker.css";
+ */
+ 
+ @import "http://ajax.googleapis.com/ajax/libs/dojo/1.8/dojo/resources/dojo.css";
+@import "http://ajax.googleapis.com/ajax/libs/dojo/1.8.2/dijit/themes/claro/claro.css";
+@import "../js/dvia/widgets/ColorPicker/ColorPicker.css";
+ 
+ 
+@import "../css/toolbar.css";
+
+
+@import "../css/application.css";
+
+@import "../css/gd.css";

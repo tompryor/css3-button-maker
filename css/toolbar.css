@@ -1,0 +1,10 @@
+#toolbar {
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+	box-shadow: 0 2px 6px #CCCCCC;
+}
+
+header {
+	 height: 30px;
+}

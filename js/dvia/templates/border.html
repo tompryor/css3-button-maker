@@ -1,0 +1,29 @@
+<div class="css3Widget">
+	<div class="inner">
+
+	<div class="control label options">
+		<span class="title">{{ watchProperty }} Sliders </span>
+		<label for="borderWidetEnableToggleCheckbox" data-dojo-attach-point="borderWidetEnableToggleLabel">On</label>
+		<span id="borderWidetEnableToggleCheckbox" data-dojo-type="dijit.form.CheckBox" data-dojo-props="checked:true" data-dojo-attach-event="onChange:_onEnabledCheckBox"></span>
+	</div>
+	<div class="css code" data-dojo-attach-point="borderWidetCode{{ watchProperty }}"></div>
+	
+		<br style="clear:both" />
+
+	<div>
+		<label for="borderWidetStyle">Style</label>
+		<select id="borderWidetStyle" data-dojo-attach-point="borderWidetStyle" data-dojo-attach-event="onchange:_onStyleUpdated">
+			<option value="dotted">dotted</option>
+			<option value="dashed">dashed</option>
+			<option value="solid" selected>solid</option>
+			<option value="double">double</option>
+			<option value="groove">groove</option>
+			<option value="ridge">ridge</option>
+			<option value="inset">inset</option>
+			<option value="outset">outset</option>
+		</select>
+	</div>
+	<br />
+	<div data-dojo-attach-point="borderSlidersControlls"></div>
+</div>
+</div>

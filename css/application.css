@@ -1,0 +1,108 @@
+body {
+	margin: 0;
+}
+
+#main {
+	margin: 25px;
+}
+#controls {
+
+}
+.slider {
+	margin-bottom: 20px;
+}
+.title {
+	display: inline-block;
+	font-weight: bold;
+	margin-bottom: 14px;
+}
+/* e.g. px, em, % after the value text box */
+.valueTypeIndicator {
+	margin-right: 10px;
+}
+.disabledLabel {
+	margin-right: 4px;
+}
+
+.control.label.options {
+	float: left;
+}
+
+.css.code {
+	background-color: #fff;
+	border: thin solid #333333;
+	font-size: 0.8em;
+	margin-bottom: 20px;
+	margin-left: 4px;
+	padding: 8px;
+	width: 342px;
+	float: right;
+}
+label, select, .dojoxColorPickerBox, .dojoxHuePickerUnderlay, .dojoxAlphaPickerUnderlay, button {
+	cursor: pointer;
+}
+#buttonContainer {
+	text-align: center;
+
+}
+#menu {
+	left: 0;
+	position: fixed;
+	width: 100%;
+	display: none;
+}
+#menu h2 {
+	margin-top: 0;
+}
+footer {
+	clear: both;
+	margin-bottom: 800px;
+}
+.unselectable, label {
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	/* Introduced in IE 10.
+	 See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/ */
+
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+#greeting {
+	margin-left: 150px;
+}
+.css3Widget {
+	background-color: #f6f8fa;
+	border: 1px solid #5ba3e0;
+	margin-bottom: 25px;
+	padding: 10px;
+	border-radius: 4px 4px 4px 4px;
+	box-shadow: 0px 0px 4px 0px rgba(109, 91, 101, 0.6);
+	margin-top: 50px;
+	display: none;
+}
+
+
+
+.inner {
+
+}
+
+.showMe {
+	display: block;
+}
+
+.dijitCheckBox, .dijitCheckBoxInput {
+	cursor: pointer;
+}
+
+pre.prettyprint {
+	padding:12px !important;
+	 margin-left: 0 !important;
+}
